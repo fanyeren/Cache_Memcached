@@ -939,10 +939,10 @@ sub stats {
                     if ($key) {
                         $stats_hr->{'hosts'}{$host}{$typename}{$key} = $value;
                     }
-                    $stats_hr->{'total'}{$key} += $value
-                        if $typename eq 'misc' && $key && $misc_keys{$key};
-                    $stats_hr->{'total'}{"malloc_$key"} += $value
-                        if $typename eq 'malloc' && $key && $key ne "version";
+#                    $stats_hr->{'total'}{$key} += $value
+#                        if $typename eq 'misc' && $key && $misc_keys{$key};
+#                    $stats_hr->{'total'}{"malloc_$key"} += $value
+#                        if $typename eq 'malloc' && $key && $key ne "version";
                 }
             } else {
                 # This stat is not key-value so just pull it
